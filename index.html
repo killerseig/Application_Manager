@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Application Manager</title>
+
+    <script src="node_modules/angular/angular.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link href="custom.css" rel="stylesheet">
+  </head>
+  <body onload="listApplications()">
+
+    <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron" style="padding-top: 2rem;">
+        <div class="container">
+          <h1 class="display-3">Application Manager</h1>
+          <p>This is a manager to handle popular files.</p>
+        </div>
+      </div>
+      <div id="warningAlert"></div>
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-sm-8">
+            <table class="table table-hover table-striped table-responsive" >
+              <thead class="text-center">
+                <tr>
+                  <th scope="col">#ID</th>
+                  <th scope="col">App Name</th>
+                  <th scope="col">Description</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody id="showApplications">
+              </tbody>
+            </table>
+            </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-3">
+            <div class="container">
+              <div class="row">
+                <h4>Add Application</h4>
+                <input class="form-control" type="text" id="applicationName" placeholder="Application Name">
+              </div>
+              <div class="row">
+                <textarea class="form-control" type="text" rows="3" id="applicationDescription" placeholder="Application Description"></textarea>
+              </div>
+              <div class="row">
+                <label>Application Location<br>(Where is the file you want to run/open)</label>
+                <input type="file" class="form-control-file" id="applicationPath">
+              </div>
+              <div class="row">
+                <button type="button" onclick="addApplicationToArray(document.getElementById('applicationName').value,document.getElementById('applicationDescription').value,document.getElementById('applicationPath').files[0].path)" class="btn btn-primary btn-block">Add</button>
+              </div>
+              <div class="row">
+                <h4>Remove Application</h4>
+                <input class="form-control" type="text" id="applicationID" placeholder="Application #ID">
+              </div>
+              <div class="row">
+                <button type="button" onclick="removeApplicationToArray(document.getElementById('applicationID').value)" class="btn btn-danger btn-block">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </main>
+    <footer class="container">
+      <p>&copy; Christopher Larsen 2018</p>
+    </footer>
+    <script src="mainFunctions.js"></script>
+  </body>
+</html>

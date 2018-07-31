@@ -1,0 +1,32 @@
+{
+  "name": "Application_Manager",
+  "version": "1.0.0",
+  "description": "Manages applications and files.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "Application",
+    "App",
+    "Manager"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "win":{
+    "target": "nsis",
+    "icon": "build/icon.ico"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "bootstrap": "^4.1.3"
+  }
+}
