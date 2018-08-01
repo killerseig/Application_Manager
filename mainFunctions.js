@@ -52,18 +52,27 @@ function addApplicationToArray(name, description, path)
 
 function removeApplicationToArray(id)
 {
-  console.log("Remove " + id);
-  applicationList.splice(id-1, 1);
-  saveToArray();
+  if((id%1 === 0) && (id != ""))
+  {
+    console.log("Remove " + id);
+    applicationList.splice(id-1, 1);
+    saveToArray();
 
-  listApplications();
+    listApplications();
+  }
+  else {
+    {
+      console.log("Cannot Remove, '"+ id +"' is not an integer");
+      alert("You need to type in an integer (whole number: 1, 9, 21...) to remove item.");
+    }
+  }
 }
 
 function saveToArray()
 {
 
   var file = fs.createWriteStream('array.txt');
-  applicationList.forEach(function(v) {file.write(v.join(',') + '\n'); });
+  applicationList.forEach(function(v) {file.write(v.join('[{nxtprt}]') + '\n'); });
 
   file.end();
 }
@@ -73,6 +82,6 @@ function loadToArray()
   var tempArray = fs.readFileSync("array.txt").toString().split("\n");
   for(var i = 0; i < tempArray.length - 1; i++)
   {
-    applicationList.push(tempArray[i].split(","));
+    applicationList.push(tempArray[i].split("[{nxtprt}]"));
   }
 }
