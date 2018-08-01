@@ -1,8 +1,8 @@
 version: 1.0.0
 files:
   - url: Application_Manager-Setup-1.0.0.exe
-    sha512: ujV9Pe9KOIUcK3DB92Nu1xC+5MrpOXlKcsqn+5eqChSHOwdDksZdqyKbvH4DEpn/U4i73Cj744HTc9JCLYxwuw==
-    size: 36783167
+    sha512: DxPGHWhYCb4arM93Ee/dmgjqYJ1ZnUaHeTar05QstqOIXJiXrW877ebcsFy0bvvrMPhIyvqnidnrG3kNVeWeDQ==
+    size: 36783307
 path: Application_Manager-Setup-1.0.0.exe
-sha512: ujV9Pe9KOIUcK3DB92Nu1xC+5MrpOXlKcsqn+5eqChSHOwdDksZdqyKbvH4DEpn/U4i73Cj744HTc9JCLYxwuw==
-releaseDate: '2018-07-31T19:36:56.329Z'
+sha512: DxPGHWhYCb4arM93Ee/dmgjqYJ1ZnUaHeTar05QstqOIXJiXrW877ebcsFy0bvvrMPhIyvqnidnrG3kNVeWeDQ==
+releaseDate: '2018-08-01T14:28:11.449Z'
